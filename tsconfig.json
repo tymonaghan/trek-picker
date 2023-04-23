@@ -1,0 +1,10 @@
+//write a tsconfig file with module interop enabled
+{
+  "include": ["src/**/*", "App.tsx"],
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES5",
+    "esModuleInterop": true,
+    "jsx": "react"
+  }
+}
