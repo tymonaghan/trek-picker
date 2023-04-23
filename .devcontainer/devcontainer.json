@@ -1,0 +1,12 @@
+{
+  "name": "trek picker codespace",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "GitHub.copilot",
+        "mgmcdermott.vscode-language-babel"
+      ]
+    }
+  },
+  "postCreateCommand": "npm install"
+}
