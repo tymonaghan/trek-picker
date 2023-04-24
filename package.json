@@ -39,7 +39,6 @@
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
-    "react-router-dom": "^6.10.0",
-    "react-typescript": "^1.0.0"
+    "react-router-dom": "^6.10.0"
   }
 }

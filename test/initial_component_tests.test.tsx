@@ -10,5 +10,5 @@ describe("the App component", () => {
     const { getByText } = render(<App />);
     const linkElement = getByText(/hello world/i);
     expect(linkElement).toBeInTheDocument();
-  }); //end test
+  });
 }); //end describe
