@@ -1,11 +1,10 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests on node 16.x
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+# clean install, build, and test on all branches but main
 
-name: test on push to dev
+name: test on push to development branch
 
 on:
   push:
-    branches: [ "dev" ]
+    branches-ignore: main
 
 jobs:
   test:
