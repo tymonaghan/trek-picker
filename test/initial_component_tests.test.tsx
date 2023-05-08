@@ -6,9 +6,9 @@ import App from "../src/App";
 
 //wrap this test in a describe block for "App"
 describe("the App component", () => {
-  test("renders hello world text", () => {
+  test("renders trek picker header text", () => {
     const { getByText } = render(<App />);
-    const linkElement = getByText(/hello world/i);
+    const linkElement = getByText(/trek picker/i);
     expect(linkElement).toBeInTheDocument();
   });
 }); //end describe
