@@ -15,7 +15,6 @@ const App = () => {
   return (
     <Box>
       <VStack>
-
         <Heading as="h1" size="2xl">
           Trek Picker
         </Heading>
@@ -28,12 +27,11 @@ const App = () => {
         <Button>Series & Episode Guide</Button>
         <Center>
           <Card>
-            <CardHeader><Heading as="h2" size="sm">
-              Your Profile            </Heading>
+            <CardHeader>
+              <Heading as="h2" size="sm">Your Profile</Heading>
             </CardHeader>
-            <CardBody>
-              <Text>
-              </Text>
+            <CardBody>              <Text>
+            </Text>
               Welcome, {rank} {username}
               <Text>
 
