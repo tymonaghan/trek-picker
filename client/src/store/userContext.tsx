@@ -2,7 +2,7 @@ import React from 'react';
 import axios from "axios"
 
 // Create a context with a default value
-const UserContext = React.createContext(null);
+const UserContext = React.createContext({ username: 'unknown', rank: 'Cadet' });
 
 export const UserProvider = ({ children }) => {
   const [user, setUser] = React.useState({ username: 'unknown', rank: 'Cadet' });

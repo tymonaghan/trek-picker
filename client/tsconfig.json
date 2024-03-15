@@ -1,9 +1,14 @@
 //write a tsconfig file with module interop enabled
 {
-  "include": ["src/**/*", "App.tsx"],
+  "include": [
+    "src/**/*",
+    "test/**/*",
+    "App.tsx",
+  ],
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "ESNext",
     "target": "ES5",
+    "moduleResolution": "node",
     "esModuleInterop": true,
     "jsx": "react",
     "sourceMap": true
