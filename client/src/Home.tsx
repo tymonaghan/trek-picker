@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   VStack,
   Box, Heading, Image, Center, Stack, Button, Tooltip,
@@ -6,22 +6,15 @@ import {
 } from "@chakra-ui/react";
 import { InfoIcon } from "@chakra-ui/icons"
 import { Link } from "react-router-dom";
-import axios from "axios"
+import UserContext from "./store/userContext";
 
 const Home = () => {
+  const user = React.useContext(UserContext); // Use the context
   const [captain, setCaptain] = useState<"picard" | "kirk">("picard");
-  const [currentUser, setCurrentUser] = useState({ username: 'unknown', rank: 'Cadet' })
-
-
-  useEffect(() => {
-    axios.get('/api/example').then(resp => setCurrentUser(resp.data))
-  }, [])
-
 
   return (
     <Box>
       <VStack>
-
         <Link to="/picker">
           <Button rightIcon={<Tooltip label="Use a slot-machine style interface to find a Star Trek episode that matches your mood">
             <InfoIcon />
@@ -38,7 +31,7 @@ const Home = () => {
             </CardHeader>
             <CardBody>
               <Text>
-                Welcome, {currentUser.rank} {currentUser.username !== 'unknown' ? currentUser.username : null}
+                Welcome, {user.rank} {user.username !== 'unknown' ? user.username : null}
               </Text>
               <Text>
                 Trek Picker User since 2024

@@ -2,6 +2,7 @@ import React from "react";
 import { Center, Heading } from "@chakra-ui/react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Home, TrekPicker } from "."
+import { UserProvider } from "./store/userContext";
 
 const App = () => {
 
@@ -13,10 +14,12 @@ const App = () => {
           Trek Picker
         </Heading>
       </Center>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/picker" element={<TrekPicker />} />
-      </Routes>
+      <UserProvider>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/picker" element={<TrekPicker />} />
+        </Routes>
+      </UserProvider>
     </BrowserRouter>
 
   );
