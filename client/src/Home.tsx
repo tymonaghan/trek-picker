@@ -21,9 +21,7 @@ const Home = () => {
   return (
     <Box>
       <VStack>
-        <Heading as="h1" size="2xl">
-          Trek Picker
-        </Heading>
+
         <Link to="/picker">
           <Button rightIcon={<Tooltip label="Use a slot-machine style interface to find a Star Trek episode that matches your mood">
             <InfoIcon />
