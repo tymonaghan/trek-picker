@@ -3,17 +3,20 @@ const path = require('path')
 
 const app = express();
 const port = 3000;
-const router = express.Router()
 
-// Serve static files from the React app's build directory
-app.use(express.static(path.join(__dirname, '../client/dist')));
+// create a router we can use
+// any routes used by this router are prepended by '/api'
+const router = express.Router()
 app.use('/api', router)
+
+// serve static files from build directory
+app.use(express.static(path.join(__dirname, '../client/dist')));
 
 router.get('/example', (req, res) => {
     res.json({ username: 'Riker', rank: 'Commander' });
 });
 
-// Catch-all handler for any request that doesn't match the above, to serve the React app
+// serve the app to any request that doesn't match the above
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/dist', 'index.html'));
 });
