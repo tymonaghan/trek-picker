@@ -15,7 +15,6 @@ app.get('*', (req, res) => {
 
 app.listen(port, (error) => {
     if (!error) {
-        console.log(path.join(__dirname, 'client', 'dist'));
         console.log(`Server is running on port ${port}`)
     }
     else {
