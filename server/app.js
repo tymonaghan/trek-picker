@@ -7,6 +7,11 @@ const router = express.Router()
 
 // Serve static files from the React app's build directory
 app.use(express.static(path.join(__dirname, '../client/dist')));
+app.use('/api', router)
+
+router.get('/example', (req, res) => {
+    res.json({ username: 'Riker', rank: 'Commander' });
+});
 
 // Catch-all handler for any request that doesn't match the above, to serve the React app
 app.get('*', (req, res) => {

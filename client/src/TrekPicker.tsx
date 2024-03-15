@@ -4,8 +4,6 @@ import {
   VStack, Box, Heading, Center, Button, Tooltip,
   Card, CardBody, CardHeader, Text
 } from "@chakra-ui/react";
-import { InfoIcon } from "@chakra-ui/icons"
-
 
 const TrekPicker = () => {
   return (

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   VStack,
   Box, Heading, Image, Center, Stack, Button, Tooltip,
@@ -6,13 +6,17 @@ import {
 } from "@chakra-ui/react";
 import { InfoIcon } from "@chakra-ui/icons"
 import { Link } from "react-router-dom";
-
-
+import axios from "axios"
 
 const Home = () => {
   const [captain, setCaptain] = useState<"picard" | "kirk">("picard");
-  const rank = 'Cadet'
-  const [username, setUsername] = useState("unknown");
+  const [currentUser, setCurrentUser] = useState({ username: 'unknown', rank: 'Cadet' })
+
+
+  useEffect(() => {
+    axios.get('/api/example').then(resp => setCurrentUser(resp.data))
+  }, [])
+
 
   return (
     <Box>
@@ -36,7 +40,7 @@ const Home = () => {
             </CardHeader>
             <CardBody>
               <Text>
-                Welcome, {rank} {username !== 'unknown' ? username : null}
+                Welcome, {currentUser.rank} {currentUser.username !== 'unknown' ? currentUser.username : null}
               </Text>
               <Text>
                 Trek Picker User since 2024
