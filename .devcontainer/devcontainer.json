@@ -3,10 +3,10 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "GitHub.copilot",
+        // "GitHub.copilot",
         "mgmcdermott.vscode-language-babel"
       ]
     }
   },
-  "postCreateCommand": "cd client && npm install"
+  "postCreateCommand": "cd client && npm install && cd ../server && npm install"
 }
