@@ -54,6 +54,7 @@
     "@emotion/styled": "^11.11.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "framer-motion": "^10.12.8",
-    "react-router-dom": "^6.10.0"
+    "react-router-dom": "^6.10.0",
+    "sqlite3": "^5.1.7"
   }
 }
