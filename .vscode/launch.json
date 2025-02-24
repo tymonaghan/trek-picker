@@ -4,7 +4,7 @@
     {
       "command": "cd ${workspaceFolder}/client && npm run start",
       "cwd": "${workspaceFolder}",
-      "name": "run npm start",
+      "name": "dev",
       "request": "launch",
       "type": "node-terminal"
     },
@@ -28,7 +28,7 @@
       "name": "dev++",
       "configurations": [
         "start express server",
-        "run npm start"
+        "dev"
       ]
     }
   ]
