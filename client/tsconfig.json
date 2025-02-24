@@ -4,6 +4,8 @@
     "src/**/*",
     "test/**/*",
     "App.tsx",
+    "/client",
+    "client"
   ],
   "compilerOptions": {
     "module": "ESNext",
