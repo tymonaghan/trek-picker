@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "vitest",
+    "dev": "vite",
     "start": "webpack build && webpack serve --mode development",
     "build": "webpack build"
   },
@@ -52,8 +53,11 @@
     "@chakra-ui/react": "^2.6.1",
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
+    "@vitejs/plugin-react": "^4.3.4",
     "eslint-plugin-react-hooks": "^4.6.0",
     "framer-motion": "^10.12.8",
-    "react-router-dom": "^6.10.0"
+    "react-router-dom": "^6.10.0",
+    "sqlite3": "^5.1.7",
+    "vite": "^6.1.1"
   }
 }
