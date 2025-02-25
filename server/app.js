@@ -5,13 +5,6 @@ const db = require('./db');
 const app = express();
 const port = 3000;
 
-// set up dummy db
-db.serialize(() => {
-    db.run('CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, username TEXT, rank TEXT)');
-    db.run('INSERT INTO users (username, rank) VALUES (?, ?)', ['Riker', 'Commander']);
-    db.run('INSERT INTO users (username, rank) VALUES (?, ?)', ['Wesley', 'Ensign']);
-});
-
 // create a router we can use
 // any routes used by this router are prepended by '/api'
 const router = express.Router()
