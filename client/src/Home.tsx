@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import {
   VStack,
-  Box, Heading, Image, Center, Stack, Button, Tooltip,
-  Card, CardBody, CardHeader, CardFooter, Text
+  Box, Heading, Image, Center, Stack, Button,
+  Card, Text
 } from "@chakra-ui/react";
+import { Tooltip } from "@/components/ui/tooltip"
 import { InfoIcon } from "@chakra-ui/icons"
 import { Link } from "react-router-dom";
 import UserContext from "./store/userContext";
@@ -18,38 +19,37 @@ const Home = () => {
     <Box>
       <VStack>
         <Link to="/picker">
-          <Button rightIcon={<Tooltip label="Use a slot-machine style interface to find a Star Trek episode that matches your mood">
-            <InfoIcon />
-          </Tooltip>
-          }>
-            Trek Picker
+          <Button>
+            Trek Picker<Tooltip content="Use a slot-machine style interface to find a Star Trek episode that matches your mood">
+              <InfoIcon />
+            </Tooltip>
           </Button>
         </Link>
         <Link to="/episode-guide">
           <Button>Series & Episode Guide</Button>
         </Link>
         <Center>
-          <Card backgroundImage={"/facepalm.png"} backgroundPosition={"center"} backdropSaturate={"0.2"}>
-            <CardHeader>
+          <Card.Root backgroundImage={"/facepalm.png"} backgroundPosition={"center"} backdropSaturate={"0.2"}>
+            <Card.Header>
               <Heading as="h2" size="sm">Your Profile</Heading>
-            </CardHeader>
-            <CardBody>
+            </Card.Header>
+            <Card.Body>
               <Text>
                 Welcome, {user.rank} {user.username !== 'unknown' ? user.username : null}
               </Text>
               <Text>
                 Trek Picker User since 2024
               </Text>
-            </CardBody>
-            <CardFooter><Button>Edit Profile</Button></CardFooter>
-          </Card>
+            </Card.Body>
+            <Card.Footer><Button>Edit Profile</Button></Card.Footer>
+          </Card.Root>
         </Center>
         <Image src={captain == "kirk" ? kirkUrl : picardUrl
         }
           maxH={"250px"}
           objectFit={"contain"} />
         <Center>
-          <Stack direction={"row"} spacing={"2.5"}>
+          <Stack direction={"row"} padding={"2.5"}>
             <Button colorScheme="blue" onClick={() => setCaptain("picard")}>
               Picard
             </Button>

@@ -25,6 +25,16 @@ router.post('/user', (req, res) => {
     });
 });
 
+router.get('/episodes', (req, res) => {
+    db.get('SELECT series_abbr, season_number, episode_number, title FROM episodes', (err, rows) => {
+        if (err) {
+            res.status(500).json({ error: err.message });
+        } else {
+            res.json(rows);
+        }
+    });
+});
+
 // serve the app to any request that doesn't match the above
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/dist', 'index.html'));

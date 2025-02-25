@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import {
-  VStack, Box, Heading, Center, Button, Tooltip,
-  Card, CardBody, CardHeader, Text
+  VStack, Box, Heading, Center, Button,
+  Card, Text
 } from "@chakra-ui/react";
 
 const TrekPicker = () => {
@@ -22,15 +22,14 @@ const TrekPicker = () => {
         </Button>
         <Button disabled>Series & Episode Guide</Button>
         <Center>
-          <Card>
-            <CardHeader>
+          <Card.Root>
+            <Card.Header>
               <Heading as="h2" size="sm">Trek Picker</Heading>
-            </CardHeader>
-            <CardBody>
+            </Card.Header>
+            <Card.Body>
               <Text>Trek Picker will go here!</Text>
-            </CardBody>
-
-          </Card>
+            </Card.Body>
+          </Card.Root>
         </Center>
       </VStack>
     </Box >

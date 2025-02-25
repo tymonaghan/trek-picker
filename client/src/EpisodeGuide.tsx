@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import {
   VStack, Box, Heading, Center, Button,
-  Card, CardBody, CardHeader, Text
+  Card, Text
 } from "@chakra-ui/react";
 
 const EpisodeGuide = () => {
@@ -19,15 +19,15 @@ const EpisodeGuide = () => {
         </Button>
         <Button disabled>Series & Episode Guide</Button>
         <Center>
-          <Card>
-            <CardHeader>
+          <Card.Root>
+            <Card.Header>
               <Heading as="h2" size="sm">Trek Picker</Heading>
-            </CardHeader>
-            <CardBody>
+            </Card.Header>
+            <Card.Body>
               <Text>Episode Guide incoming</Text>
-            </CardBody>
+            </Card.Body>
 
-          </Card>
+          </Card.Root>
         </Center>
       </VStack>
     </Box >

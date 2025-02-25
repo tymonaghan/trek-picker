@@ -11,7 +11,6 @@ const App = () => {
     <BrowserRouter>
       <UserProvider>
         <HStack>
-
           <Center>
             <Heading as="h1" size="2xl">
               Trek Picker
