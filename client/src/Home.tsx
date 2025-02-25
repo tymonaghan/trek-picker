@@ -25,7 +25,9 @@ const Home = () => {
             Trek Picker
           </Button>
         </Link>
-        <Button>Series & Episode Guide</Button>
+        <Link to="/episode-guide">
+          <Button>Series & Episode Guide</Button>
+        </Link>
         <Center>
           <Card backgroundImage={"/facepalm.png"} backgroundPosition={"center"} backdropSaturate={"0.2"}>
             <CardHeader>
