@@ -12,6 +12,7 @@ const db = new sqlite3.Database(dbPath, (err) => {
 
 // populate users
 db.serialize(() => {
+  db.run('DROP TABLE IF EXISTS users');
   db.run('CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, username TEXT, rank TEXT)');
   db.run('INSERT INTO users (username, rank) VALUES (?, ?)', ['Riker', 'Commander']);
   db.run('INSERT INTO users (username, rank) VALUES (?, ?)', ['Wesley', 'Ensign']);
@@ -19,6 +20,7 @@ db.serialize(() => {
 
 // populate series
 db.serialize(() => {
+  db.run('DROP TABLE IF EXISTS series');
   db.run('CREATE TABLE IF NOT EXISTS series (abbreviation TEXT PRIMARY KEY, title TEXT)');
   db.run('INSERT INTO series (title, abbreviation) VALUES (?, ?)', ['Star Trek (Original Series)', 'TOS']);
   db.run('INSERT INTO series (title, abbreviation) VALUES (?, ?)', ['The Next Generation', 'TNG']);
@@ -34,6 +36,7 @@ db.serialize(() => {
 
 // populate episodes
 db.serialize(() => {
+  db.run('DROP TABLE IF EXISTS episodes');
   db.run('CREATE TABLE IF NOT EXISTS episodes (id INTEGER PRIMARY KEY AUTOINCREMENT, series_abbr TEXT NOT NULL, season_number INTEGER NOT NULL, episode_number INTEGER NOT NULL, title TEXT NOT NULL, FOREIGN KEY (series_abbr) REFERENCES series(abbreviation))');
   db.run('INSERT INTO episodes (series_abbr, season_number, episode_number, title) VALUES (?, ?, ?, ?)', ['TOS', 1, 2, 'Charlie X']);
   db.run('INSERT INTO episodes (series_abbr, season_number, episode_number, title) VALUES (?, ?, ?, ?)', ['TOS', 3, 24, 'Turnabout Intruder']);
