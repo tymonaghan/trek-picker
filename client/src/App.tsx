@@ -1,5 +1,7 @@
 import React from "react";
-import { Box, Center, Heading, Avatar, HStack, Float } from "@chakra-ui/react";
+import { Box, Center, Heading, Float, MenuRoot, MenuTrigger, MenuContent, MenuItem } from "@chakra-ui/react";
+import { Tooltip } from "./components/ui/tooltip";
+import { Avatar } from "./components/ui/avatar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { EpisodeGuide, Home, TrekPicker } from "."
 import { UserProvider } from "./store/userContext";
@@ -16,12 +18,17 @@ const App = () => {
               Trek Picker
             </Heading>
           </Center>
-          <Float offset="6">
-            <Avatar.Root size="sm">
-              <Avatar.Fallback name="Tyler Monaghan" />
-              <Avatar.Image src="/facepalm.png" />
-            </Avatar.Root>
-          </Float>
+          <MenuRoot positioning={{ placement: "bottom-start" }}>
+            <MenuTrigger asChild>
+              <Float offset="6">
+                <Avatar name="T Monny" src="/facepalm.png" />
+              </Float>
+            </MenuTrigger>
+            <MenuContent>
+              <MenuItem value="randomize">Randomize user</MenuItem>
+              <MenuItem value="logout">Log Out</MenuItem>
+            </MenuContent>
+          </MenuRoot>
         </Box>
         <Routes>
           <Route path="/" element={<Home />} />
