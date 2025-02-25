@@ -12,9 +12,11 @@ app.use('/api', router)
 
 // serve static files from build directory
 app.use(express.static(path.join(__dirname, '../client/dist')));
+router.use(express.json())
 
-router.get('/example', (req, res) => {
-    db.get('SELECT username, rank FROM users WHERE username = ?', ['Riker'], (err, row) => {
+router.post('/user', (req, res) => {
+    username = req.body.username
+    db.get('SELECT username, rank FROM users WHERE username = ?', [username], (err, row) => {
         if (err) {
             res.status(500).json({ error: err.message });
         } else {

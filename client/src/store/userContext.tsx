@@ -10,7 +10,7 @@ export const UserProvider = ({ children }) => {
   // make this call whenever this context provider mounts
   // set the response as "user"
   React.useEffect(() => {
-    axios.get('/api/example').then(response => {
+    axios.post('/api/user', { username: 'Wesley' }).then(response => {
       // Assume the response has a 'data' object with 'username' and 'rank'
       setUser(response.data);
     });
