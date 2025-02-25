@@ -9,8 +9,14 @@
   ],
   "compilerOptions": {
     "module": "ESNext",
-    "target": "ES5",
-    "moduleResolution": "node",
+    "target": "ESNext",
+    "moduleResolution": "Bundler",
+    "skipLibCheck": true,
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
     "esModuleInterop": true,
     "jsx": "react",
     "sourceMap": true
