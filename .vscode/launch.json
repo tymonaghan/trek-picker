@@ -2,9 +2,9 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "command": "cd ${workspaceFolder}/client && npm run start",
+      "command": "cd ${workspaceFolder}/client && npm run dev",
       "cwd": "${workspaceFolder}",
-      "name": "run npm start",
+      "name": "dev",
       "request": "launch",
       "type": "node-terminal"
     },
@@ -28,7 +28,7 @@
       "name": "dev++",
       "configurations": [
         "start express server",
-        "run npm start"
+        "dev"
       ]
     }
   ]

@@ -7,6 +7,8 @@ import {
 import { InfoIcon } from "@chakra-ui/icons"
 import { Link } from "react-router-dom";
 import UserContext from "./store/userContext";
+import kirkUrl from "../dist/kirk.jpg"
+import picardUrl from "../dist/picard.jpg"
 
 const Home = () => {
   const user = React.useContext(UserContext); // Use the context
@@ -25,7 +27,7 @@ const Home = () => {
         </Link>
         <Button>Series & Episode Guide</Button>
         <Center>
-          <Card>
+          <Card backgroundImage={"/facepalm.png"} backgroundPosition={"center"} backdropSaturate={"0.2"}>
             <CardHeader>
               <Heading as="h2" size="sm">Your Profile</Heading>
             </CardHeader>
@@ -40,7 +42,10 @@ const Home = () => {
             <CardFooter><Button>Edit Profile</Button></CardFooter>
           </Card>
         </Center>
-        <Image src={`${captain}.jpg`} />
+        <Image src={captain == "kirk" ? kirkUrl : picardUrl
+        }
+          maxH={"250px"}
+          objectFit={"contain"} />
         <Center>
           <Stack direction={"row"} spacing={"2.5"}>
             <Button colorScheme="blue" onClick={() => setCaptain("picard")}>
