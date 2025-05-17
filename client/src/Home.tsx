@@ -40,7 +40,7 @@ const Home = () => {
             <CardFooter><Button>Edit Profile</Button></CardFooter>
           </Card>
         </Center>
-        <Image src={`${captain}.jpg`} />
+        <Image src={`/${captain}.jpg`} />
         <Center>
           <Stack direction={"row"} spacing={"2.5"}>
             <Button colorScheme="blue" onClick={() => setCaptain("picard")}>
