@@ -1,3 +1,5 @@
+// This file is no longer needed after migrating to Vite.
+
 import path from "path"
 import { fileURLToPath } from 'url';
 

@@ -1,4 +1,4 @@
-import Home from "./Home"
-import TrekPicker from "./TrekPicker"
+import Home from "./Home";
+import TrekPicker from "./TrekPicker";
 
-export { Home, TrekPicker }
+export { Home, TrekPicker };
