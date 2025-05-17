@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import {
   VStack,
-  Box, Heading, Image, Center, Stack, Button, Tooltip,
+  Box, Heading, Image, Center, Stack, Button,
   Card, CardBody, CardHeader, CardFooter, Text
 } from "@chakra-ui/react";
-import { InfoIcon } from "@chakra-ui/icons"
-import { Link } from "react-router-dom";
 import UserContext from "./store/userContext";
 
 const Home = () => {
@@ -14,16 +12,8 @@ const Home = () => {
 
   return (
     <Box>
+      <Box height="64px" /> {/* Spacer for fixed navbar, now handled in App */}
       <VStack>
-        <Link to="/picker">
-          <Button rightIcon={<Tooltip label="Use a slot-machine style interface to find a Star Trek episode that matches your mood">
-            <InfoIcon />
-          </Tooltip>
-          }>
-            Trek Picker
-          </Button>
-        </Link>
-        <Button>Series & Episode Guide</Button>
         <Center>
           <Card>
             <CardHeader>
@@ -53,7 +43,6 @@ const Home = () => {
         </Center>
       </VStack>
     </Box>
-
   )
 }
 export default Home
