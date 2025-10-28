@@ -12,12 +12,11 @@ const Home = () => {
 
   return (
     <Box>
-      <Box height="64px" /> {/* Spacer for fixed navbar, now handled in App */}
-      <VStack>
+      <VStack spacing={6}>
         <Center>
-          <Card>
+          <Card maxW="600px" w="full">
             <CardHeader>
-              <Heading as="h2" size="sm">Your Profile</Heading>
+              <Heading as="h2" size="md">Your Profile</Heading>
             </CardHeader>
             <CardBody>
               <Text>
@@ -30,7 +29,16 @@ const Home = () => {
             <CardFooter><Button>Edit Profile</Button></CardFooter>
           </Card>
         </Center>
-        <Image src={`/${captain}.jpg`} />
+        <Box>
+          <Image 
+            src={`/${captain}.jpg`} 
+            alt={`Captain ${captain}`}
+            maxW="400px"
+            maxH="400px"
+            objectFit="contain"
+            borderRadius="md"
+          />
+        </Box>
         <Center>
           <Stack direction={"row"} spacing={"2.5"}>
             <Button colorScheme="blue" onClick={() => setCaptain("picard")}>

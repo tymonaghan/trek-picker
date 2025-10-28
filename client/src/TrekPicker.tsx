@@ -1,40 +1,25 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import {
-  VStack, Box, Heading, Center, Button, Tooltip,
-  Card, CardBody, CardHeader, Text
+  VStack, Box, Heading, Center,
+  Card, CardBody, Text
 } from "@chakra-ui/react";
 
 const TrekPicker = () => {
   return (
     <Box>
-      <VStack>
-        <Heading as="h1" size="2xl">
+      <VStack spacing={6}>
+        <Heading as="h1" size="xl">
           Trek Picker
         </Heading>
-        <Link to="/">
-          <Button>
-            Home
-          </Button>
-        </Link>
-        <Button disabled>
-          Trek Picker
-        </Button>
-        <Button disabled>Series & Episode Guide</Button>
         <Center>
-          <Card>
-            <CardHeader>
-              <Heading as="h2" size="sm">Trek Picker</Heading>
-            </CardHeader>
+          <Card maxW="600px" w="full">
             <CardBody>
               <Text>Trek Picker will go here!</Text>
             </CardBody>
-
           </Card>
         </Center>
       </VStack>
-    </Box >
-
+    </Box>
   )
 }
 export default TrekPicker
