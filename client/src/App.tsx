@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Home, TrekPicker } from ".";
 import { UserProvider } from "./store/userContext";
 import Navbar from "./Navbar";
+import EpisodeGuide from "./EpisodeGuide";
 
 const App = () => {
   return (
@@ -14,8 +15,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/picker" element={<TrekPicker />} />
-          {/* Add the guide route placeholder */}
-          <Route path="/guide" element={<div>Series & Episode Guide coming soon!</div>} />
+          <Route path="/guide" element={<EpisodeGuide />} />
         </Routes>
       </UserProvider>
     </BrowserRouter>
