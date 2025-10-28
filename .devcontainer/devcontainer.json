@@ -1,5 +1,6 @@
 {
   "name": "trek picker codespace",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20-bookworm",
   "customizations": {
     "vscode": {
       "extensions": [
