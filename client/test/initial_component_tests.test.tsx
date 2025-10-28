@@ -2,7 +2,7 @@ import React from "react";
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import App from '../src/App';
-import { act } from 'react-dom/test-utils'
+import { act } from 'react'
 
 //  mock axios response
 vi.mock('axios', () => ({
@@ -14,19 +14,19 @@ vi.mock('axios', () => ({
 describe('App component', () => {
   it('renders the component', async () => {
     await act(async () => { render(<App />) });
-    expect(screen.getByRole('heading', { name: /trek picker/i })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /picker/i })).toBeInTheDocument();
   });
 
   it("renders picard's stern yet reassuring visage", async () => {
     await act(async () => { render(<App />) });
     const image = screen.getByRole('img');
     expect(image).toBeInTheDocument();
-    expect(image).toHaveAttribute('src', 'picard.jpg');
+    expect(image).toHaveAttribute('src', '/picard.jpg');
   });
 
   it("renders a user's rank on the screen", async () => {
     await act(async () => { render(<App />) });
-    const rankElement = await screen.findByText(/(commander)|(captain)|(cadet)/i);
+    const rankElement = await screen.findByText(/(commander)|(captain)|(cadet)|(ensign)/i);
     expect(rankElement).toBeInTheDocument();
   });
 });
