@@ -1,0 +1,78 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Series {
+  id        Int       @id @default(autoincrement())
+  name      String    @unique
+  abbreviation String?
+  description String?
+  releaseYear Int?
+  seasons   Season[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@map("series")
+}
+
+model Season {
+  id        Int       @id @default(autoincrement())
+  seasonNumber Int
+  seriesId  Int
+  series    Series    @relation(fields: [seriesId], references: [id], onDelete: Cascade)
+  episodes  Episode[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@unique([seriesId, seasonNumber])
+  @@map("seasons")
+}
+
+model Episode {
+  id           Int       @id @default(autoincrement())
+  title        String
+  episodeNumber Int
+  seasonId     Int
+  season       Season    @relation(fields: [seasonId], references: [id], onDelete: Cascade)
+  airDate      DateTime?
+  description  String?
+  characters   CharacterAppearance[]
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  @@unique([seasonId, episodeNumber])
+  @@map("episodes")
+}
+
+model Character {
+  id          Int       @id @default(autoincrement())
+  name        String    @unique
+  species     String?
+  affiliation String?
+  description String?
+  appearances CharacterAppearance[]
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@map("characters")
+}
+
+model CharacterAppearance {
+  id          Int       @id @default(autoincrement())
+  characterId Int
+  episodeId   Int
+  character   Character @relation(fields: [characterId], references: [id], onDelete: Cascade)
+  episode     Episode   @relation(fields: [episodeId], references: [id], onDelete: Cascade)
+  createdAt   DateTime  @default(now())
+
+  @@unique([characterId, episodeId])
+  @@map("character_appearances")
+}
