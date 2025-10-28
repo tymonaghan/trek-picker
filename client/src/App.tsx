@@ -7,7 +7,7 @@ import Navbar from "./Navbar";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <Navbar />
       <Box height="64px" /> {/* Spacer for fixed navbar */}
       <UserProvider>
