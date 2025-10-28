@@ -12,5 +12,5 @@
   "features": {
     "ghcr.io/devcontainers/features/docker-in-docker:2": {}
   },
-  "postCreateCommand": "cd client && npm install && cd ../server && npm install && cp .env.example .env && npx prisma generate"
+  "postCreateCommand": "cd client && npm install && cd ../server && npm install && cp .env.example .env && npx prisma generate && ./init-db.sh"
 }

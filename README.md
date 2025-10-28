@@ -33,9 +33,11 @@ A web app by Ty Monaghan and Sam Stahl. Development assisted by GitHub Co-Pilot.
    cd server
    cp .env.example .env
    
-   # Run migrations
-   npm run db:migrate
+   # Run migrations and seed the database
+   ./init-db.sh
    ```
+   
+   Note: When using the devcontainer, the database is automatically migrated and seeded during container creation.
 
 3. **Run the application:**
    ```bash

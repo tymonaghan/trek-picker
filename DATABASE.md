@@ -7,7 +7,18 @@ This project uses PostgreSQL with Prisma ORM.
 ### Prerequisites
 - Docker and Docker Compose installed
 
-### Steps
+### Automated Setup (DevContainer)
+
+When using VS Code with the DevContainer, the database setup is fully automated:
+1. Open the repository in VS Code
+2. Reopen in Container when prompted
+3. The container will automatically:
+   - Install all dependencies
+   - Start the PostgreSQL database
+   - Run migrations
+   - Seed the database with Star Trek data
+
+### Manual Setup
 
 1. **Start the PostgreSQL database using Docker Compose:**
    ```bash
@@ -30,32 +41,28 @@ This project uses PostgreSQL with Prisma ORM.
    npm install
    ```
 
-4. **Run Prisma migrations to create the database schema:**
+4. **Initialize the database (migrations and seeding):**
    ```bash
-   npx prisma migrate dev --name init
-   ```
-
-5. **Generate Prisma Client:**
-   ```bash
-   npx prisma generate
-   ```
-
-6. **Seed the database with Star Trek data:**
-   ```bash
-   npm run db:seed
+   ./init-db.sh
    ```
    
-   This will populate the database with:
-   - Star Trek series (TOS, TNG, DS9, VOY, ENT, DIS, PIC, LD, PRO, SNW)
-   - Sample episodes for each series
-   - Main characters from across the franchise
+   This script will:
+   - Wait for the database to be ready
+   - Run Prisma migrations to create the database schema
+   - Seed the database with Star Trek data (10 series, sample episodes, and characters)
+   
+   Alternatively, you can run these steps manually:
+   ```bash
+   npx prisma migrate deploy
+   npm run db:seed
+   ```
 
-7. **Start the server:**
+5. **Start the server:**
    ```bash
    npm run start:server
    ```
 
-8. **Verify database connection:**
+6. **Verify database connection:**
    Open your browser and navigate to `http://localhost:3000/api/health`
    You should see: `{"status":"ok","database":"connected"}`
 
