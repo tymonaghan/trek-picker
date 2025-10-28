@@ -1,0 +1,319 @@
+{
+  "series": [
+    {
+      "name": "Star Trek: The Original Series",
+      "abbreviation": "TOS",
+      "description": "The original Star Trek series follows the voyages of Captain James T. Kirk and the crew of the USS Enterprise as they explore strange new worlds, seek out new life and new civilizations, and boldly go where no man has gone before.",
+      "releaseYear": 1966,
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "episodes": [
+            {
+              "episodeNumber": 1,
+              "title": "The Man Trap",
+              "airDate": "1966-09-08",
+              "description": "The crew encounters a shape-shifting creature that feeds on salt."
+            },
+            {
+              "episodeNumber": 2,
+              "title": "Charlie X",
+              "airDate": "1966-09-15",
+              "description": "A teenage boy with unusual powers threatens the crew."
+            }
+          ]
+        },
+        {
+          "seasonNumber": 2,
+          "episodes": [
+            {
+              "episodeNumber": 1,
+              "title": "Amok Time",
+              "airDate": "1967-09-15",
+              "description": "Spock must return to Vulcan to fulfill a marriage arrangement."
+            }
+          ]
+        },
+        {
+          "seasonNumber": 3,
+          "episodes": [
+            {
+              "episodeNumber": 1,
+              "title": "Spock's Brain",
+              "airDate": "1968-09-20",
+              "description": "Spock's brain is stolen by an alien woman."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Star Trek: The Next Generation",
+      "abbreviation": "TNG",
+      "description": "Set approximately 100 years after the original series, this show follows the adventures of Captain Jean-Luc Picard and the crew of the USS Enterprise-D as they explore the galaxy.",
+      "releaseYear": 1987,
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "episodes": [
+            {
+              "episodeNumber": 1,
+              "title": "Encounter at Farpoint",
+              "airDate": "1987-09-28",
+              "description": "The crew encounters the omnipotent Q and investigates a mysterious space station."
+            },
+            {
+              "episodeNumber": 2,
+              "title": "The Naked Now",
+              "airDate": "1987-10-05",
+              "description": "The crew is infected with a virus that removes their inhibitions."
+            }
+          ]
+        },
+        {
+          "seasonNumber": 2,
+          "episodes": [
+            {
+              "episodeNumber": 1,
+              "title": "The Child",
+              "airDate": "1988-11-21",
+              "description": "Counselor Troi becomes pregnant with an alien life form."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Star Trek: Deep Space Nine",
+      "abbreviation": "DS9",
+      "description": "Set on a space station near the planet Bajor, this series explores the complexities of war, politics, and religion in the Star Trek universe.",
+      "releaseYear": 1993,
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "episodes": [
+            {
+              "episodeNumber": 1,
+              "title": "Emissary",
+              "airDate": "1993-01-03",
+              "description": "Commander Sisko takes command of Deep Space Nine and discovers the Bajoran wormhole."
+            },
+            {
+              "episodeNumber": 2,
+              "title": "A Man Alone",
+              "airDate": "1993-01-10",
+              "description": "Odo is accused of murder when a man he had arrested is found dead."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Star Trek: Voyager",
+      "abbreviation": "VOY",
+      "description": "Stranded in the Delta Quadrant, 70,000 light-years from home, Captain Janeway and her crew must find a way back to the Alpha Quadrant while exploring new worlds along the way.",
+      "releaseYear": 1995,
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "episodes": [
+            {
+              "episodeNumber": 1,
+              "title": "Caretaker",
+              "airDate": "1995-01-16",
+              "description": "The USS Voyager is transported to the Delta Quadrant by a powerful alien."
+            },
+            {
+              "episodeNumber": 2,
+              "title": "Parallax",
+              "airDate": "1995-01-23",
+              "description": "Voyager becomes trapped in a temporal anomaly."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Star Trek: Enterprise",
+      "abbreviation": "ENT",
+      "description": "Set before the events of the original series, this show follows the crew of Earth's first warp-five capable starship, the Enterprise NX-01, as humanity takes its first steps into interstellar exploration.",
+      "releaseYear": 2001,
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "episodes": [
+            {
+              "episodeNumber": 1,
+              "title": "Broken Bow",
+              "airDate": "2001-09-26",
+              "description": "Captain Archer and his crew embark on humanity's first deep space voyage."
+            },
+            {
+              "episodeNumber": 2,
+              "title": "Fight or Flight",
+              "airDate": "2001-10-03",
+              "description": "The crew encounters a derelict ship with dead crew members."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Star Trek: Discovery",
+      "abbreviation": "DIS",
+      "description": "Set roughly a decade before the events of the original series, Discovery follows the crew of the USS Discovery as they navigate galactic conflict and personal challenges.",
+      "releaseYear": 2017,
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "episodes": [
+            {
+              "episodeNumber": 1,
+              "title": "The Vulcan Hello",
+              "airDate": "2017-09-24",
+              "description": "First Officer Michael Burnham encounters a Klingon beacon while on a mission."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Star Trek: Picard",
+      "abbreviation": "PIC",
+      "description": "Set twenty years after the events of Star Trek: Nemesis, this series follows a retired Jean-Luc Picard as he becomes involved in a new adventure.",
+      "releaseYear": 2020,
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "episodes": [
+            {
+              "episodeNumber": 1,
+              "title": "Remembrance",
+              "airDate": "2020-01-23",
+              "description": "Retired Admiral Picard is visited by a mysterious young woman seeking his help."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Star Trek: Lower Decks",
+      "abbreviation": "LD",
+      "description": "An animated comedy series focusing on the support crew serving on one of Starfleet's least important ships, the USS Cerritos.",
+      "releaseYear": 2020,
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "episodes": [
+            {
+              "episodeNumber": 1,
+              "title": "Second Contact",
+              "airDate": "2020-08-06",
+              "description": "Ensign Boimler and Mariner deal with the aftermath of a first contact mission."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Star Trek: Prodigy",
+      "abbreviation": "PRO",
+      "description": "An animated series following a group of young aliens who discover an abandoned Starfleet ship and use it to search for adventure, meaning and salvation.",
+      "releaseYear": 2021,
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "episodes": [
+            {
+              "episodeNumber": 1,
+              "title": "Lost & Found",
+              "airDate": "2021-10-28",
+              "description": "A group of young aliens escape a prison colony and discover the USS Protostar."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Star Trek: Strange New Worlds",
+      "abbreviation": "SNW",
+      "description": "Following Captain Christopher Pike and the crew of the USS Enterprise in the decade before Captain Kirk, this series explores new worlds and civilizations.",
+      "releaseYear": 2022,
+      "seasons": [
+        {
+          "seasonNumber": 1,
+          "episodes": [
+            {
+              "episodeNumber": 1,
+              "title": "Strange New Worlds",
+              "airDate": "2022-05-05",
+              "description": "Captain Pike returns to the Enterprise and faces a civilization on the brink of self-destruction."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "characters": [
+    {
+      "name": "James T. Kirk",
+      "species": "Human",
+      "affiliation": "Starfleet",
+      "description": "Captain of the USS Enterprise in the original series"
+    },
+    {
+      "name": "Spock",
+      "species": "Vulcan/Human",
+      "affiliation": "Starfleet",
+      "description": "Science officer and first officer of the USS Enterprise"
+    },
+    {
+      "name": "Leonard McCoy",
+      "species": "Human",
+      "affiliation": "Starfleet",
+      "description": "Chief medical officer of the USS Enterprise, known as 'Bones'"
+    },
+    {
+      "name": "Jean-Luc Picard",
+      "species": "Human",
+      "affiliation": "Starfleet",
+      "description": "Captain of the USS Enterprise-D and later USS Enterprise-E"
+    },
+    {
+      "name": "William Riker",
+      "species": "Human",
+      "affiliation": "Starfleet",
+      "description": "First officer of the USS Enterprise-D"
+    },
+    {
+      "name": "Data",
+      "species": "Android",
+      "affiliation": "Starfleet",
+      "description": "Operations officer and science officer of the USS Enterprise-D"
+    },
+    {
+      "name": "Benjamin Sisko",
+      "species": "Human",
+      "affiliation": "Starfleet",
+      "description": "Commander and later Captain of Deep Space Nine"
+    },
+    {
+      "name": "Kathryn Janeway",
+      "species": "Human",
+      "affiliation": "Starfleet",
+      "description": "Captain of the USS Voyager"
+    },
+    {
+      "name": "Jonathan Archer",
+      "species": "Human",
+      "affiliation": "Starfleet",
+      "description": "Captain of the Enterprise NX-01"
+    },
+    {
+      "name": "Michael Burnham",
+      "species": "Human",
+      "affiliation": "Starfleet",
+      "description": "Science specialist on the USS Discovery"
+    }
+  ]
+}

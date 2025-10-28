@@ -40,12 +40,22 @@ This project uses PostgreSQL with Prisma ORM.
    npx prisma generate
    ```
 
-6. **Start the server:**
+6. **Seed the database with Star Trek data:**
+   ```bash
+   npm run db:seed
+   ```
+   
+   This will populate the database with:
+   - Star Trek series (TOS, TNG, DS9, VOY, ENT, DIS, PIC, LD, PRO, SNW)
+   - Sample episodes for each series
+   - Main characters from across the franchise
+
+7. **Start the server:**
    ```bash
    npm run start:server
    ```
 
-7. **Verify database connection:**
+8. **Verify database connection:**
    Open your browser and navigate to `http://localhost:3000/api/health`
    You should see: `{"status":"ok","database":"connected"}`
 
@@ -91,7 +101,48 @@ The database includes the following entities:
 - Fields: id, characterId, episodeId
 - Relationship: Many-to-many relationship between Characters and Episodes
 
+## Database Seeding
+
+The project includes a seed script that populates the database with Star Trek series, episodes, and characters.
+
+### Seed Data
+
+The seed data is stored in `server/prisma/seed-data.json` and includes:
+
+- **10 Star Trek Series**: TOS, TNG, DS9, VOY, ENT, DIS, PIC, LD, PRO, SNW
+- **Sample episodes** from each series to demonstrate the data structure
+- **Main characters** from across the franchise
+
+### Running the Seed Script
+
+To populate the database with the seed data:
+
+```bash
+cd server
+npm run db:seed
+```
+
+**Note**: The seed script will clear all existing data before inserting new data. To preserve existing data, modify the seed script accordingly.
+
+### Seed Data Source
+
+The seed data in `seed-data.json` contains curated information about Star Trek series and episodes. While a comprehensive Star Trek API (STAPI) exists at https://stapi.co, this project uses a local JSON file for seeding to:
+- Ensure consistent data format
+- Reduce external dependencies
+- Allow for customization of included data
+- Provide faster and more reliable seeding
+
+You can extend the seed data by editing `server/prisma/seed-data.json` to include:
+- Additional episodes for each season
+- More characters and their appearances in episodes
+- Additional series or seasons
+
 ## Useful Prisma Commands
+
+- **Seed the database with Star Trek data:**
+  ```bash
+  npm run db:seed
+  ```
 
 - **View database in Prisma Studio:**
   ```bash
@@ -102,6 +153,8 @@ The database includes the following entities:
   ```bash
   npx prisma migrate reset
   ```
+  
+  Note: `prisma migrate reset` will automatically run the seed script after resetting.
 
 - **Generate Prisma Client after schema changes:**
   ```bash
