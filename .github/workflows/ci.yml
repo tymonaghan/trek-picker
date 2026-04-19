@@ -11,6 +11,9 @@ on:
       - dev
       - main
 
+permissions:
+  contents: read
+
 jobs:
   client:
     name: Client (Node 20)
