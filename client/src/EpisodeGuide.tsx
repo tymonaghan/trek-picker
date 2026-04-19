@@ -158,7 +158,7 @@ const EpisodeGuide = () => {
           {/* Header with selected series info */}
           <HStack justify="space-between" align="center" p={4} bg="blue.50" borderRadius="md">
             <HStack spacing={3}>
-              <Heading as="h1" size="lg">
+              <Heading as="h1" size="xl">
                 {selectedSeries.name}
               </Heading>
               {selectedSeries.abbreviation && (
@@ -285,10 +285,10 @@ const EpisodeGuide = () => {
     <Container maxW="container.xl" py={8}>
       <VStack spacing={6} align="stretch">
         <Box>
-          <Heading as="h1" size="2xl" mb={2}>
+          <Heading as="h1" size="xl" mb={2}>
             Star Trek Episode Guide
           </Heading>
-          <Text fontSize="lg" color="gray.600">
+          <Text fontSize="md" color="gray.600">
             Select a series to browse episodes
           </Text>
         </Box>
@@ -317,7 +317,7 @@ const EpisodeGuide = () => {
                   <VStack align="stretch" spacing={3}>
                     <HStack justify="space-between" align="start">
                       <Box>
-                        <Heading as="h2" size="lg" mb={1}>
+                        <Heading as="h2" size="md" mb={1}>
                           {show.name}
                         </Heading>
                         {show.abbreviation && (
