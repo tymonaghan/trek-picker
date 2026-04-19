@@ -24,9 +24,9 @@ describe('App component', () => {
     expect(image).toHaveAttribute('src', '/picard.jpg');
   });
 
-  it("renders a user's rank on the screen", async () => {
+  it("renders the recently viewed placeholder section", async () => {
     await act(async () => { render(<App />) });
-    const rankElement = await screen.findByText(/(commander)|(captain)|(cadet)|(ensign)/i);
-    expect(rankElement).toBeInTheDocument();
+    const heading = await screen.findByRole('heading', { name: /recently viewed/i });
+    expect(heading).toBeInTheDocument();
   });
 });

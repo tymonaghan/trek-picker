@@ -1,0 +1,47 @@
+# CI: install, build, and test on all non-main branches and PRs targeting dev or main
+
+name: CI
+
+on:
+  push:
+    branches-ignore:
+      - main
+  pull_request:
+    branches:
+      - dev
+      - main
+
+jobs:
+  client:
+    name: Client (Node 20)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./client/
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js 20.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          cache: 'npm'
+          cache-dependency-path: ./client/package-lock.json
+      - run: npm ci
+      - run: npm run build --if-present
+      - run: npm test -- --run
+
+  server:
+    name: Server (Node 20)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./server/
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js 20.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          cache: 'npm'
+          cache-dependency-path: ./server/package-lock.json
+      - run: npm ci
