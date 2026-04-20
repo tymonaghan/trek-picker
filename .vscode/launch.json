@@ -15,6 +15,27 @@
       "request": "launch",
       "type": "node-terminal"
     },
+    {
+      "command": "docker compose up -d",
+      "cwd": "${workspaceFolder}",
+      "name": "start database (docker)",
+      "request": "launch",
+      "type": "node-terminal"
+    },
+    {
+      "command": "docker compose down",
+      "cwd": "${workspaceFolder}",
+      "name": "stop database (docker)",
+      "request": "launch",
+      "type": "node-terminal"
+    },
+    {
+      "command": "cd ${workspaceFolder}/server && npm run db:migrate",
+      "cwd": "${workspaceFolder}",
+      "name": "run database migrations",
+      "request": "launch",
+      "type": "node-terminal"
+    }
     // {
     //   "type": "chrome",
     //   "request": "launch",
@@ -29,7 +50,22 @@
       "configurations": [
         "start express server",
         "run npm start"
-      ]
+      ],
+      "presentation": {
+        "order": 1
+      }
+    },
+    {
+      "name": "full stack (with database)",
+      "configurations": [
+        "start database (docker)",
+        "start express server",
+        "run npm start"
+      ],
+      "presentation": {
+        "order": 2
+      },
+      "stopAll": true
     }
   ]
 }

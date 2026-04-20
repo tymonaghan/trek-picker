@@ -1,5 +1,6 @@
 {
   "name": "trek picker codespace",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20-bookworm",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -8,5 +9,8 @@
       ]
     }
   },
-  "postCreateCommand": "cd client && npm install && cd ../server && npm install"
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "postCreateCommand": "docker compose up -d && cd client && npm install && cd ../server && npm install && cp .env.example .env && npx prisma generate && ./init-db.sh"
 }
