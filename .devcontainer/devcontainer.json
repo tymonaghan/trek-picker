@@ -10,7 +10,8 @@
     }
   },
   "features": {
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/aws-cli:1": {}
   },
-  "postCreateCommand": "docker compose up -d && cd client && npm install && cd ../server && npm install && cp .env.example .env && npx prisma generate && ./init-db.sh"
+  "postCreateCommand": "curl -LsSf https://astral.sh/uv/install.sh | sudo env UV_INSTALL_DIR=/usr/local/bin UV_NO_MODIFY_PATH=1 sh && docker compose up -d && cd client && npm install && cd ../server && npm install && cp .env.example .env && npx prisma generate && ./init-db.sh"
 }
