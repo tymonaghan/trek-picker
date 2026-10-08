@@ -8,5 +8,10 @@
   "vs-code-prettier-eslint.prettierLast": false,
   "eslint.workingDirectories": [
     "client"
-  ]
+  ],
+  "chat.tools.terminal.autoApprove": {
+    "git remote": true,
+    "npm run build": true,
+    "npm test": true
+  }
 }
